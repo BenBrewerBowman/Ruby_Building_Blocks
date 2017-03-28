@@ -1,10 +1,9 @@
 def substrings (sentence, dictionary)
 
-  sentence_split = sentence.split
   dictionary_hash = Hash.new(0)
 
   dictionary.each do |dictionary_word|
-    sentence_split.each do |sentence_word|
+    sentence.split.each do |sentence_word|
       sentence_word.downcase!
       if sentence_word.include? dictionary_word
         dictionary_hash[dictionary_word] += 1
